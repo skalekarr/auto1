@@ -1,0 +1,22 @@
+.favorites {
+    width: 300px;
+    height: 150px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.favorites > .pull-right {
+    padding: 8px;
+    margin: 8px;
+    background: #EA7F28;
+    width: 128px;
+    height: 32px;
+}
+
+.favorites > .pull-right:hover {
+    padding: 8px;
+    margin: 8px;
+    background: #EA7F28;
+    width: 128px;
+    height: 32px;
+}

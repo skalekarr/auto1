@@ -1,0 +1,30 @@
+.filter > div, .filter > button  {
+    padding: 8px;
+    margin: 8px;
+}
+
+.filter-button {
+    width: 128px;
+    height: 32px;
+    background-color: #EA7F28;
+    text-align: center;
+    padding: 8px;
+    margin: 8px;
+}
+
+.filter-button:hover {
+    background-color: #EA7F28;
+    padding: 8px;
+    margin: 8px;
+}
+
+.filter-button:focus {
+    background-color: #D37324;
+    text-align: center;
+    padding: 8px;
+    margin: 8px;
+}
+
+.pull-right {
+    float: right;
+}
