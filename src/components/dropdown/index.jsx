@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DropdownButton, Dropdown } from 'react-bootstrap'
+import { DropdownButton, Dropdown } from 'react-bootstrap';
 // eslint-disable-next-line
-import styles from './index.styles.css'
+import styles from './index.styles.css';
 
-const CustomDropdown = ({ title, variant, items, selected, handleClick }) =>
+const CustomDropdown = ({ title, options, selected, handleClick }) =>
   <DropdownButton
     title={title}
     variant="none"
     className="border"
-    id={`dropdown-variants-${variant}`}
-    key={variant}
+    id={`dropdown-variants-${title}`}
+    key={title}
   >
-    {items.map(item =>
-      <Dropdown.Item key={item.name} onClick={() => handleClick(item.name)} active={item.name === selected}>{item.name}</Dropdown.Item>
+    {options.map(option =>
+      <Dropdown.Item key={option.name} onClick={() => handleClick(option.name)} active={option.name === selected}>{option.name}</Dropdown.Item>
     )}
   </DropdownButton>
 
 CustomDropdown.propTypes = {
   title: PropTypes.string.isRequired,
-  items: PropTypes.array,
+  options: PropTypes.array,
   selected: PropTypes.string,
   handleClick: PropTypes.func
 };

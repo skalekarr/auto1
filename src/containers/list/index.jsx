@@ -24,7 +24,6 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-
 const mapStateToProps = ({
   carsList: {
     meta: { currentPage, totalCarsCount, totalPageCount },
@@ -51,7 +50,7 @@ const mapStateToProps = ({
   totalPageCount
 });
 
-class App extends Component {
+export class List extends Component {
   constructor(props) {
     super(props);
     this.handleFilterChange = this.handleFilterChange.bind(this);
@@ -135,12 +134,22 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+List.propTypes = {
   getCarsList: PropTypes.func.isRequired,
   getFilterColors: PropTypes.func.isRequired,
   getFilterManufacturers: PropTypes.func.isRequired,
   setFilters: PropTypes.func.isRequired,
-  setSortOrder: PropTypes.func.isRequired
+  setSortOrder: PropTypes.func.isRequired,
+  cars: PropTypes.array.isRequired,
+  colors: PropTypes.array.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  selectedColor: PropTypes.string.isRequired,
+  selectedManufacturer: PropTypes.string.isRequired,
+  manufacturers: PropTypes.array.isRequired,
+  sortOrder: PropTypes.string.isRequired,
+  totalCarsCount: PropTypes.number.isRequired,
+  totalPageCount: PropTypes.number.isRequired,
+  history: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(List);

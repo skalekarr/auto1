@@ -13,7 +13,7 @@ import {
 import carsAPI from '../../api-config';
 
 // workers
-export function* getFilterColors() {
+export function* getFilterColorsAsync() {
     try {
         const response = yield carsAPI.getFilterColors();
         const { status, data } = response;
@@ -30,7 +30,7 @@ export function* getFilterColors() {
 }
 
 // workers
-export function* getFilterManufacturers() {
+export function* getFilterManufacturersAsync() {
     try {
         const response = yield carsAPI.getFilterManufacturers();
         const { status, data } = response;
@@ -49,9 +49,9 @@ export function* getFilterManufacturers() {
 // watchers
 export const watchers = [
     function* watchGetFilterColors() {
-        yield takeEvery(GET_FILTER_COLORS, getFilterColors);
+        yield takeEvery(GET_FILTER_COLORS, getFilterColorsAsync);
     },
     function* watchGetFilterManufacturers() {
-        yield takeEvery(GET_FILTER_MANUFACTURERS, getFilterManufacturers);
+        yield takeEvery(GET_FILTER_MANUFACTURERS, getFilterManufacturersAsync);
     },
 ];

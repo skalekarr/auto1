@@ -12,7 +12,7 @@ import {
 import carsAPI from "../../api-config";
 
 // workers
-export function* getCarDetails({
+export function* getCarDetailsAsync({
   payload
 }) {
   try {
@@ -36,6 +36,6 @@ export function* getCarDetails({
 // watchers
 export const watchers = [
   function* watchgetCarDetails() {
-    yield takeEvery(GET_CAR_DETAILS, getCarDetails);
+    yield takeEvery(GET_CAR_DETAILS, getCarDetailsAsync);
   }
 ];

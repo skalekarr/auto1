@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-bootstrap';
-import Dropdown from '../dropdown/index.jsx'
+import Dropdown from '../dropdown/index.jsx';
 // eslint-disable-next-line
 import styles from './index.styles.css'
 
@@ -13,11 +13,11 @@ const ListHeader = ({ totalCarsCount, sortOrder, handleSort, currentPage, totalP
     <Row>
       <Col>
         <h6>Available Cars</h6>
-        <div>Showing {pageItems} of {totalCarsCount} results</div>
+        <div className='results'>Showing {pageItems} of {totalCarsCount} results</div>
       </Col>
       <Col className="pull-right">
         <div>Sort By</div>
-        <Dropdown title={title} items={sortItems} selected={sortOrder} handleClick={handleSort} />
+        <Dropdown title={title} options={sortItems} selected={sortOrder} handleClick={handleSort} />
       </Col>
     </Row>
   );

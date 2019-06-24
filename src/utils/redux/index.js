@@ -8,9 +8,9 @@ export function* handleSuccess(type, response) {
   yield put(successAction(type, response));
 }
 
-export function* handleError(type, error, showModal = true) {
+export function* handleError(type, error) {
   const errorAction = (type, payload) => ({
-    type: `${type}_ERROR`,
+    type: `${type}_FAILURE`,
     payload
   });
   yield put(errorAction(type, error));

@@ -6,7 +6,7 @@ import { constructQueryString } from '../../utils/generic';
 import carsAPI from '../../api-config';
 
 // workers
-export function* getCarsList({ payload }) {
+export function* getCarsListAsync({ payload }) {
   try {
     const queryString = constructQueryString(payload);
     const response = yield carsAPI.getCarsList(queryString);
@@ -26,6 +26,6 @@ export function* getCarsList({ payload }) {
 // watchers
 export const watchers = [
   function* watchGetCarsList() {
-    yield takeEvery(GET_CARS_LIST, getCarsList);
+    yield takeEvery(GET_CARS_LIST, getCarsListAsync);
   }
 ];

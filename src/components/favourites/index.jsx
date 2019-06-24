@@ -17,4 +17,4 @@ Favorites.propTypes = {
     isFavorite: PropTypes.bool.isRequired
 }
 
-export default Favorites
+export default Favorites;

@@ -5,7 +5,7 @@ import { Row, Button } from 'react-bootstrap';
 const Pagination = ({ goToPage, totalPageCount, currentPage }) => {
     return (
         <Row className="pagination">
-            <Button variant="link" onClick={() => goToPage(1)}>First</Button>
+            <Button variant="link" disabled={currentPage === 1} onClick={() => goToPage(1)}>First</Button>
             <Button variant="link" disabled={currentPage-1 === 0} onClick={() => goToPage(currentPage-1)}>Previous</Button>
             <Button variant="link" disabled>Page {currentPage} of {totalPageCount}</Button>
             <Button variant="link" disabled={currentPage === totalPageCount} onClick={() => goToPage(currentPage+1)}>Next</Button>

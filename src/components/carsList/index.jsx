@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Media, Button } from 'react-bootstrap';
-import CarDescription from '../carDescription/index.jsx'
+import CarDescription from '../carDescription/index.jsx';
 // eslint-disable-next-line
 import styles from './index.styles.css';
 

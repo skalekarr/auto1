@@ -1,15 +1,15 @@
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { Row, Col, Card } from 'react-bootstrap'
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import CarDescription from '../../components/carDescription/index.jsx'
-import AppContainer from '../../components/layout/index.jsx'
+import CarDescription from '../../components/carDescription/index.jsx';
+import AppContainer from '../../components/layout/index.jsx';
 import Favourites from '../../components/favourites/index.jsx';
-import { getCarDetails } from '../../actions'
-import { loadState, saveState, removeState } from '../../utils/generic'
+import { getCarDetails } from '../../actions';
+import { loadState, saveState, removeState } from '../../utils/generic';
 // eslint-disable-next-line
 import styles from './index.styles.css'
 
@@ -30,7 +30,7 @@ const mapStateToProps = ({
   car
 });
 
-class App extends Component {
+export class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -86,8 +86,9 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+Details.propTypes = {
   getCarDetails: PropTypes.func.isRequired,
+  match: PropTypes.object
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Details);
