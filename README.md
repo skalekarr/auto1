@@ -17,18 +17,18 @@ Runs test cases and calculates the coverage.<br>
 
 
 ## Tech-stack used
-react - UI library
-react-redux - for persisted UI state
-redux-saga - for asynchronicity 
-jest - tests
+react - UI library <br>
+react-redux - for persisted UI state <br>
+redux-saga - for asynchronicity <br>
+jest - tests <br>
 
 ## Available Functionalities
-filter color - filter available car list with color
-filter manufacturer - filter available car list with manufacturer
-sort - sort available car list with asc/desc with mileage
-pagination - load items page wise
-favourties - add/remove item from localStorage
+filter color - filter available car list with color <br>
+filter manufacturer - filter available car list with manufacturer <br>
+sort - sort available car list with asc/desc with mileage <br>
+pagination - load items page wise <br>
+favourties - add/remove item from localStorage <br>
 
 ## Notes
-filter color/manufacturer - will reset the pagination to the first page
-sort - will not reset the pagination to the first page. This can be achieved by sending the starting pageNumber
+filter color/manufacturer - will reset the pagination to the first page <br>
+sort - will not reset the pagination to the first page. This can be achieved by sending the starting pageNumber <br>
