@@ -8,4 +8,9 @@ ul li{
 
   .header {
     height: 80px;
+    border-bottom: 1px solid #EDEDED;
+  }
+
+  .header > .col > img {
+    height: 40px;
   }

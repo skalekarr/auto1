@@ -2,8 +2,8 @@ import React from 'react';
 import {
   shallow
 } from 'enzyme';
-import Header from '../header/index.jsx';
-import Footer from '../footer/index.jsx';
+import Header from '../header';
+import Footer from '../footer';
 import Container from 'react-bootstrap/Container';
 import Layout from './index.jsx'
 

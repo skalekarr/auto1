@@ -6,7 +6,7 @@ import styles from './index.styles.css'
 
 const Header = () =>
   <Row className="header">
-    <Col><Image src={logo} rounded /></Col>
+    <Col><Image src={logo} rounded onClick={() => window.location = "http://localhost:3000/"}/></Col>
     <Row className="justify-content-md-right">
       <ul>
         <li>Purchase</li>

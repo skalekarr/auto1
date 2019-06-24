@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Button } from 'react-bootstrap';
+// eslint-disable-next-line
+import styles from './index.styles.css';
 
 const Pagination = ({ goToPage, totalPageCount, currentPage }) => {
     return (

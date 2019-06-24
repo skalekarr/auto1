@@ -13,7 +13,7 @@ const CustomDropdown = ({ title, options, selected, handleClick }) =>
     key={title}
   >
     {options.map(option =>
-      <Dropdown.Item key={option.name} onClick={() => handleClick(option.name)} active={option.name === selected}>{option.name}</Dropdown.Item>
+      <Dropdown.Item className="roboto-regular" key={option.name} onClick={() => handleClick(option.name)} active={option.name === selected}>{option.name}</Dropdown.Item>
     )}
   </DropdownButton>
 

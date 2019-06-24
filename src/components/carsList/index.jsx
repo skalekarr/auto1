@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Media, Button } from 'react-bootstrap';
-import CarDescription from '../carDescription/index.jsx';
+import CarDescription from '../carDescription';
 // eslint-disable-next-line
 import styles from './index.styles.css';
 
@@ -18,8 +18,8 @@ const CarsList = ({cars, viewDetails}) =>
         />
         <Media.Body>
           <div className="ml-2 font">{manufacturerName} {modelName}</div>
-          <div className="ml-2 font"><CarDescription stockNumber={stockNumber} number={number} unit={unit} color={color} fuelType={fuelType}/></div>
-          <Button variant="link" onClick={() => viewDetails(stockNumber)}>View details</Button>
+          <div className="ml-2 font-14"><CarDescription stockNumber={stockNumber} number={number} unit={unit} color={color} fuelType={fuelType}/></div>
+          <Button variant="link font-14" onClick={() => viewDetails(stockNumber)}>View details</Button>
         </Media.Body>
       </Media>
     )}

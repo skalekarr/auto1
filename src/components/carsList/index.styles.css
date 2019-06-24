@@ -1,5 +1,6 @@
 .btn-link, .btn-link:hover {
-    color: #EA7F28
+    color: #EA7F28;
+    padding-left: 6px;
 }
 
 .img-holder {
@@ -9,5 +10,10 @@
 
 .font {
     font-family: "Roboto Bold";
+    font-size: 18px
+}
+
+.font-14 {
+    font-family: "Roboto Regular";
     font-size: 18px
 }

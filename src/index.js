@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
 import { store } from './index.store';
-import AppRoutes from './routes/index.jsx';
+import AppRoutes from './routes';
 
 ReactDOM.render(<Provider store={store}>
   <AppRoutes />

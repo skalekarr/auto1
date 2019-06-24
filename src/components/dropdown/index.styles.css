@@ -1,3 +1,8 @@
 .dropdown-item.active {
     background-color: #EA7F28
 }
+
+.dropdown > button, .roboto-regular {
+    font-size: 18px;
+    font-family: 'Roboto Regular'
+}

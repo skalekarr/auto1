@@ -10,6 +10,9 @@
     text-align: center;
     padding: 8px;
     margin: 8px;
+    border-radius: 0;
+    border-color: #EA7F28;
+    font-size: 12px;
 }
 
 .filter-button:hover {
@@ -27,4 +30,13 @@
 
 .pull-right {
     float: right;
+}
+
+.filter {
+    height: 300px;
+}
+
+.roboto-regular {
+    font-size: 18px;
+    font-family: 'Roboto Regular';
 }

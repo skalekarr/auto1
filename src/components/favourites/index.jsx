@@ -7,7 +7,7 @@ import styles from './index.styles.css';
 const Favorites = ({isFavorite, toggleFavourites}) => {
     const button = isFavorite ? 'Remove' : 'Save';
     return (<div className="favorites border">
-        If you like this car, click the button and save it in your collection of favourite items.
+        <div className="roboto-small">If you like this car, click the button and save it in your collection of favourite items.</div>
         <Button className="pull-right" onClick={toggleFavourites}>{button}</Button>
     </div>)
 }

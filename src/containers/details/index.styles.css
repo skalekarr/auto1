@@ -1,3 +1,18 @@
 .card-img-top {
     height: 400px;
 }
+
+.roboto-bold {
+    font-size: 32px;
+    font-family: 'Roboto Bold';
+}
+
+.roboto-regular {
+    font-size: 18px;
+    font-family: 'Roboto Regular';
+}
+
+.roboto-small {
+    font-size: 14px;
+    font-family: 'Roboto Regular';
+}

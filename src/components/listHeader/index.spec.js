@@ -3,7 +3,7 @@ import {
   shallow
 } from 'enzyme';
 import { Row, Col } from 'react-bootstrap';
-import Dropdown from '../dropdown/index.jsx';
+import Dropdown from '../dropdown';
 import ListHeader from './index.jsx';
 
 describe('Pagination', () => {

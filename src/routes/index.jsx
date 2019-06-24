@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import CarsList from '../containers/list/index.jsx';
-import CarDetails from '../containers/details/index.jsx'
-import Page404 from '../components/page404/index.jsx'
+import CarsList from '../containers/list';
+import CarDetails from '../containers/details';
+import Page404 from '../components/page404';
 
-const routing = () =>
+const routes = () =>
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={CarsList} />
@@ -13,4 +13,4 @@ const routing = () =>
     </Switch>
   </BrowserRouter>
 
-export default routing;
+export default routes;

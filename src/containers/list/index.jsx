@@ -5,11 +5,11 @@ import { Row, Col } from 'react-bootstrap'
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import AppContainer from '../../components/layout/index.jsx'
-import Filters from '../../components/filters/index.jsx'
-import CarsList from '../../components/carsList/index.jsx'
-import ListHeader from '../../components/listHeader/index.jsx';
-import Pagination from '../../components/pagination/index.jsx';
+import AppContainer from '../../components/layout'
+import Filters from '../../components/filters'
+import CarsList from '../../components/carsList'
+import ListHeader from '../../components/listHeader';
+import Pagination from '../../components/pagination';
 import { getCarsList, getFilterColors, getFilterManufacturers, setFilters, setSortOrder } from '../../actions'
 
 const mapDispatchToProps = dispatch =>
@@ -85,10 +85,10 @@ export class List extends Component {
   }
 
   handleSort(sortOrder) {
-    const { getCarsList, selectedColor: color, selectedManufacturer: manufacturer, currentPage: page, setSortOrder } = this.props;
+    const { getCarsList, selectedColor: color, selectedManufacturer: manufacturer, setSortOrder } = this.props;
     const sort = sortOrder.toLowerCase().includes('des') ? 'des' : 'asc';
     setSortOrder(sortOrder);
-    getCarsList({ color, manufacturer, page, sort });
+    getCarsList({ color, manufacturer, page: 1, sort });
   }
 
   viewDetails(stockNumber) {

@@ -3,7 +3,7 @@ import {
   shallow
 } from 'enzyme';
 import Filters from './index.jsx';
-import Dropdown from '../dropdown/index.jsx';
+import Dropdown from '../dropdown';
 import { Button } from 'react-bootstrap';
 
 describe('Filters', () => {

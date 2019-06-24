@@ -5,9 +5,9 @@ import { Row, Col, Card } from 'react-bootstrap'
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import CarDescription from '../../components/carDescription/index.jsx';
-import AppContainer from '../../components/layout/index.jsx';
-import Favourites from '../../components/favourites/index.jsx';
+import CarDescription from '../../components/carDescription';
+import AppContainer from '../../components/layout';
+import Favourites from '../../components/favourites';
 import { getCarDetails } from '../../actions';
 import { loadState, saveState, removeState } from '../../utils/generic';
 // eslint-disable-next-line
@@ -66,9 +66,11 @@ export class Details extends Component {
         <Card.Body>
           <Row>
             <Col>
-              <h5>{manufacturerName} {modelName}</h5>
-              <CarDescription stockNumber={stockNumber} number={number} unit={unit} color={color} fuelType={fuelType} />
-              <div>
+              <div className="roboto-bold">{manufacturerName} {modelName}</div>
+              <div className="roboto-regular">
+                <CarDescription stockNumber={stockNumber} number={number} unit={unit} color={color} fuelType={fuelType} />
+              </div>
+              <div className="roboto-small">
                 This car is currently available and can be delivered as soon as tomorrow morning. Please be aware that delivery times shown in this page are not definitive and may change due to bad weather conditions.
               </div>
             </Col>
