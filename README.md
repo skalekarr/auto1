@@ -32,3 +32,5 @@ favourties - add/remove item from localStorage <br>
 ## Notes
 filter color/manufacturer - will reset the pagination to the first page <br>
 sort - will not reset the pagination to the first page. This can be achieved by sending the starting pageNumber <br>
+security vulnerabilities in the dependencies is due to the mock server <br>
+Need internet connection to download the bootstrap styles
