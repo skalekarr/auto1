@@ -80,7 +80,7 @@ export class List extends Component {
 
   handleFilterClick() {
     const { getCarsList, selectedColor: color, selectedManufacturer: manufacturer, sortOrder } = this.props;
-    const sort = sortOrder.includes('des') ? 'des' : 'asc';
+    const sort = sortOrder.toLowerCase().includes('des') ? 'des' : 'asc';
     getCarsList({ color, manufacturer, page: 1, sort });
   }
 
